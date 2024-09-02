@@ -40,6 +40,7 @@ public class Ch05Controller {
 		log.info("clientIp: " + clientIp);
 		model.addAttribute("clientIp", clientIp);
 		
+		model.addAttribute("chNum", "ch05");
 		return "ch05/header";
 	}
 	
@@ -72,6 +73,7 @@ public class Ch05Controller {
 		model.addAttribute("mid", mid);
 		model.addAttribute("memail", memail);
 		
+		model.addAttribute("chNum", "ch05");
 		return "ch05/readCookie";
 	}
 }

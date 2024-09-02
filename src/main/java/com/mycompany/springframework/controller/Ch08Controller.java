@@ -3,6 +3,7 @@ package com.mycompany.springframework.controller;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,8 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/ch08")
 public class Ch08Controller {
 	@GetMapping("/login")
-	public String loginForm() {
+	public String loginForm(Model model) {
+		model.addAttribute("chNum", "ch08");
 		return "ch08/loginForm";
 	}
 	
@@ -32,6 +34,12 @@ public class Ch08Controller {
 		session.setAttribute("login", member);
 		
 		return "redirect:/";
+	}
+	
+	@GetMapping("/loginInfo")
+	public String loginInfo(Model model) {
+		model.addAttribute("chNum", "ch08");
+		return "ch08/loginInfo";
 	}
 	
 	@GetMapping("/logout")

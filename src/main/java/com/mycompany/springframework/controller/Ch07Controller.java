@@ -29,12 +29,14 @@ public class Ch07Controller {
 		ServletContext application = request.getServletContext();
 		application.setAttribute("key4", "value4");
 		
+		model.addAttribute("chNum", "ch07");
 		return "ch07/objectScope";
 	}
 	
 	@GetMapping("/objectScope2")
 	public String objectScope2(HttpServletRequest request, 
 							HttpSession session, Model model) {
+		model.addAttribute("chNum", "ch07");
 		return "ch07/objectScope";
 	}
 }

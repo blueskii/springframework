@@ -11,7 +11,8 @@
 		<config>src/main/resources/spring/dispatcher/ch01_view_resolver.xml</config>
 		<config>src/main/resources/spring/dispatcher/ch01_static_resources.xml</config>
 		<config>src/main/resources/spring/dispatcher/ch02_interceptor.xml</config>
-		<config>src/main/resources/spring/dispatcher/ch04_message.xml</config>
+		<config>src/main/resources/spring/dispatcher/ch09_multipart_resolver.xml</config>
+		<config>src/main/resources/spring/dispatcher/ch04_ch11_message.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

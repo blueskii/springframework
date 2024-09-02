@@ -60,11 +60,11 @@
   
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ch04" aria-expanded="false" aria-controls="ch04">
+      <button class="accordion-button ${chNum=='ch04'?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#ch04" aria-expanded="${chNum=='ch04'}" aria-controls="ch04">
         Ch04. Controller(폼 유효성 검사)
       </button>
     </h2>
-    <div id="ch04" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+    <div id="ch04" class="accordion-collapse collapse ${chNum=='ch04'?'show':''}" data-bs-parent="#accordionMenu">
       <div class="accordion-body">
         <ul>
         	<li><a href="${pageContext.request.contextPath}/ch04/loginForm">로그인 폼</a></li>
@@ -75,11 +75,11 @@
 
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ch05" aria-expanded="false" aria-controls="ch05">
+      <button class="accordion-button ${chNum=='ch05'?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#ch05" aria-expanded="${chNum=='ch05'}" aria-controls="ch05">
         Ch05. Controller(헤더값 및 쿠키 설정)
       </button>
     </h2>
-    <div id="ch05" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+    <div id="ch05" class="accordion-collapse collapse ${chNum=='ch05'?'show':''}" data-bs-parent="#accordionMenu">
       <div class="accordion-body">
         <ul>
         	<li><a href="${pageContext.request.contextPath}/ch05/header">요청 헤더값 얻기</a></li>
@@ -92,11 +92,11 @@
   
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ch06" aria-expanded="false" aria-controls="ch06">
+      <button class="accordion-button ${chNum=='ch06'?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#ch06" aria-expanded="${chNum=='ch06'}" aria-controls="ch06">
         Ch06. 포워드와 리다이렉트
       </button>
     </h2>
-    <div id="ch06" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+    <div id="ch06" class="accordion-collapse collapse ${chNum=='ch06'?'show':''}" data-bs-parent="#accordionMenu">
       <div class="accordion-body">
         <ul>
         	<li><a href="${pageContext.request.contextPath}/ch06/forward">포워드</a></li>
@@ -111,11 +111,11 @@
   
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ch07" aria-expanded="false" aria-controls="ch07">
+      <button class="accordion-button ${chNum=='ch07'?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#ch07" aria-expanded="${chNum=='ch07'}" aria-controls="ch07">
         Ch07. 데이터(객체)사용 범위 및 데이터 전달
       </button>
     </h2>
-    <div id="ch07" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+    <div id="ch07" class="accordion-collapse collapse ${chNum=='ch07'?'show':''}" data-bs-parent="#accordionMenu">
       <div class="accordion-body">
         <ul>
         	<li><a href="${pageContext.request.contextPath}/ch07/objectScope1">데이터(객체) 사용 범위</a></li>
@@ -127,11 +127,11 @@
   
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ch08" aria-expanded="false" aria-controls="ch08">
+      <button class="accordion-button ${chNum=='ch08'?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#ch08" aria-expanded="${chNum=='ch08'}" aria-controls="ch08">
         Ch08. 세션 지원 API
       </button>
     </h2>
-    <div id="ch08" class="accordion-collapse collapse" data-bs-parent="#accordionMenu">
+    <div id="ch08" class="accordion-collapse collapse ${chNum=='ch08'?'show':''}" data-bs-parent="#accordionMenu">
       <div class="accordion-body">
         <ul>
         	<li><a href="${pageContext.request.contextPath}/ch08/login">로그인 폼</a></li>
@@ -140,6 +140,41 @@
         </ul>
       </div>
     </div>
-  </div>     
+  </div>  
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button ${chNum=='ch09'?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#ch09" aria-expanded="${chNum=='ch09'}" aria-controls="ch09">
+        Ch09. 파일 업로드와 다운로드
+      </button>
+    </h2>
+    <div id="ch09" class="accordion-collapse collapse ${chNum=='ch09'?'show':''}" data-bs-parent="#accordionMenu">
+      <div class="accordion-body">
+        <ul>
+        	<li><a href="${pageContext.request.contextPath}/ch09/fileUploadForm">파일 업로드</a></li>
+        	<li><a href="${pageContext.request.contextPath}/ch09/downloadFileList">파일 리스트</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>   
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button ${chNum=='ch10'?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#ch10" aria-expanded="${chNum=='ch10'}" aria-controls="ch10">
+        Ch10. 예외 처리
+      </button>
+    </h2>
+    <div id="ch10" class="accordion-collapse collapse ${chNum=='ch10'?'show':''}" data-bs-parent="#accordionMenu">
+      <div class="accordion-body">
+        <ul>
+        	<li><a href="${pageContext.request.contextPath}/ch10/handlingException1">try-catch 이용</a></li>
+        	<li><a href="${pageContext.request.contextPath}/ch10/handlingException2">@ExceptionHandler 이용</a></li>
+        	<li><a href="${pageContext.request.contextPath}/ch10/handlingException3">사용자 정의 예외 처리</a></li>
+        	<li><a href="${pageContext.request.contextPath}/ch10/handlingException4">기타 500 예외 처리</a></li>
+        	<li><a href="${pageContext.request.contextPath}/ch10/aaaaaaaaaaaaaaaaaa">404 처리</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>       
   
 </div>

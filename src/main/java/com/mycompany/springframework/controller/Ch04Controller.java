@@ -3,6 +3,7 @@ package com.mycompany.springframework.controller;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +21,8 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/ch04")
 public class Ch04Controller {
 	@GetMapping("/loginForm")
-	public String loginForm() {
+	public String loginForm(Model model) {
+		model.addAttribute("chNum", "ch04");
 		return "ch04/loginForm";
 	}
 	
@@ -30,9 +32,10 @@ public class Ch04Controller {
 	}
 	
 	@PostMapping("/login")
-	public String login(@Valid Ch04LoginForm loginForm, Errors errors) {
+	public String login(@Valid Ch04LoginForm loginForm, Errors errors, Model model) {
 		if(errors.hasErrors()) {
 			log.info("유효성 검사 실패");
+			model.addAttribute("chNum", "ch04");
 			return "ch04/loginForm";
 		} 
 		

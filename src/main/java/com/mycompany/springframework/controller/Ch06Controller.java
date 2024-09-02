@@ -35,6 +35,7 @@ public class Ch06Controller {
 		//방법2
 		request.setAttribute("member2", member);
 		
+		model.addAttribute("chNum", "ch06");
 		return "ch06/forward";
 	}
 	
@@ -52,7 +53,7 @@ public class Ch06Controller {
 	}
 	
 	@GetMapping("/sessionData")
-	public String sessionData(HttpSession session) {
+	public String sessionData(HttpSession session, Model model) {
 		//세션에서 찾아오기(읽기)
 		Ch06Member member = (Ch06Member) session.getAttribute("member");
 		
@@ -60,11 +61,13 @@ public class Ch06Controller {
 		log.info("mname: " + member.getMname());
 		log.info("memail: " + member.getMemail());
 		
+		model.addAttribute("chNum", "ch06");
 		return "ch06/sessionData";
 	}
 	
 	@GetMapping("/cartview")
-	public String cartview(HttpSession session) {	
+	public String cartview(HttpSession session, Model model) {
+		model.addAttribute("chNum", "ch06");
 		return "ch06/cartview";
 	}
 	
@@ -79,6 +82,7 @@ public class Ch06Controller {
 		}
 		
 		model.addAttribute("productList", productList);
+		model.addAttribute("chNum", "ch06");
 		return "ch06/productlist";
 	}
 	
