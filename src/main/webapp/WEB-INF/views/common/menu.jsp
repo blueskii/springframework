@@ -175,6 +175,54 @@
         </ul>
       </div>
     </div>
-  </div>       
+  </div>   
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button ${chNum=='ch11'?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#ch11" aria-expanded="${chNum=='ch11'}" aria-controls="ch11">
+        Ch11. 국제화(다국어) 처리
+      </button>
+    </h2>
+    <div id="ch11" class="accordion-collapse collapse ${chNum=='ch11'?'show':''}" data-bs-parent="#accordionMenu">
+      <div class="accordion-body">
+        <ul>
+        	<li><a href="${pageContext.request.contextPath}/ch11/joinForm">다국어 처리된 폼</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>      
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button ${chNum=='ch12'?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#ch12" aria-expanded="${chNum=='ch12'}" aria-controls="ch12">
+        Ch12. 의존성 주입(DI)
+      </button>
+    </h2>
+    <div id="ch12" class="accordion-collapse collapse ${chNum=='ch12'?'show':''}" data-bs-parent="#accordionMenu">
+      <div class="accordion-body">
+        <ul>
+        	<li><a href="${pageContext.request.contextPath}/ch12/createBeanByXml">XML 설정으로 관리 빈 생성</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>  
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button ${chNum=='ch13'?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#ch13" aria-expanded="${chNum=='ch13'}" aria-controls="ch13">
+        Ch13. 데이터베이스 연동
+      </button>
+    </h2>
+    <div id="ch13" class="accordion-collapse collapse ${chNum=='ch13'?'show':''}" data-bs-parent="#accordionMenu">
+      <div class="accordion-body">
+        <ul>
+        	<li><a href="${pageContext.request.contextPath}/ch13/joinForm">회원 가입</a></li>
+        	<li><a href="${pageContext.request.contextPath}/ch13/loginForm">로그인</a></li>
+        	<li><a href="${pageContext.request.contextPath}/ch13/writeBoardForm">게시물 쓰기</a></li>
+        	<li><a href="${pageContext.request.contextPath}/ch13/boardList">게시물 목록</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>  
   
 </div>

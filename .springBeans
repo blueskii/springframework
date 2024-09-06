@@ -13,8 +13,13 @@
 		<config>src/main/resources/spring/dispatcher/ch02_interceptor.xml</config>
 		<config>src/main/resources/spring/dispatcher/ch09_multipart_resolver.xml</config>
 		<config>src/main/resources/spring/dispatcher/ch04_ch11_message.xml</config>
+		<config>src/main/resources/spring/root/ch12_create_bean_by_xml.xml</config>
+		<config>src/main/resources/spring/root/ch13_datasource.xml</config>
+		<config>src/main/resources/spring/root/ch13_mybatis.xml</config>
+		<config>src/main/resources/spring/dispatcher/14_aop.xml</config>
 	</configs>
 	<autoconfigs>
+		<config>src/main/resources/spring/dispatcher/ch12_properties.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>

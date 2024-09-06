@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 기본 생성자를 호출해서 관리 객체로 생성 -->
+	<bean 
+		id="ch12Service1"
+		class="com.mycompany.springframework.service.Ch12Service1"/>
+
+	<!-- 정적 메소드를 호출해서 리턴된 객체를 관리 객체로 생성 -->
+	<bean 
+		name="ch12Service2"
+		class="com.mycompany.springframework.service.Ch12Service2"
+		factory-method="getInstance"/>
+
+	<!-- 관리 객체의 인스턴스 메소드를 호출해서 리턴된 객체를 관리 객체로 생성 -->
+	<bean id="ch12Service3"
+		factory-bean="ch12Service2"
+		factory-method="getCh12Service3"></bean>
+		
+	<!-- Setter 주입 -->
+	<bean id="ch12Service5"
+		  class="com.mycompany.springframework.service.Ch12Service5">
+		<property name="dao1" ref="ch12Dao1"/>	
+		<property name="dao2" ref="ch12Dao2"/>		
+		<property name="field3" value="mobile"/>
+		<property name="field4" value="3"/>  
+	</bean>
+	
+	
+	<!-- Contructor 주입 -->
+	<bean id="ch12Service6"
+		  class="com.mycompany.springframework.service.Ch12Service6">
+		<constructor-arg ref="ch12Dao1"/>	
+		<constructor-arg ref="ch12Dao2"/>  
+	</bean>	
+	
+	<!-- properties의 값을 주입 -->
+	<bean id="ch12Service9" 
+		class="com.mycompany.springframework.service.Ch12Service9">
+		<property name="prop4" value="${prop4}"/>
+	</bean>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+

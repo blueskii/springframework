@@ -11,12 +11,15 @@
 	
 	<div class="me-2">
 		<c:if test="${login == null}">
-			<a class="btn btn-success btn-sm" href="${pageContext.request.contextPath}/ch08/login">로그인</a>
+			<%-- <a class="btn btn-success btn-sm" href="${pageContext.request.contextPath}/ch08/login">로그인</a> --%>
+			<a class="btn btn-success btn-sm" href="${pageContext.request.contextPath}/ch13/loginForm">로그인</a>
 		</c:if>
 		<c:if test="${login != null}">
 			<img width="40" src="${pageContext.request.contextPath}/resources/image/login.png"/>
 			<span class="text-white me-2">${login.mid}</span>
-			<a class="btn btn-danger btn-sm" href="${pageContext.request.contextPath}/ch08/logout">로그아웃</a>
+			<%-- <a class="btn btn-danger btn-sm" href="${pageContext.request.contextPath}/ch08/logout">로그아웃</a> --%>
+			<a class="btn btn-danger btn-sm" href="${pageContext.request.contextPath}/ch13/logout">로그아웃</a>
+		
 		</c:if>
 	</div>
 </nav>	
